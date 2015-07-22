@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>哆啦A夢</title>
+	<meta name="description" content="Doraemon is cute.">
+	<meta http.eqiv = "Content Type" content = "text/html" charset = "utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		var name = "Doraemon";
+		var color = "blue";
+		console.log("My name is" + name + ". I am " + color + ".");
+		function count(i) {
+			for (var cnt = i;cnt < 10;cnt++)  {
+				if (cnt % 2 == 0){
+					alert(cnt);
+				}
+			}
+		}
+		
+		/*function letsGoFun(){
+			var doraemon = document.getElementById("Doraemon");
+			if(cntClick%2==0){
+				doraemon.src = "15_121010114251_1.jpg";
+			} else {
+				doraemon.src = "http://fa.topitme.com/a/1a/84/1120932505591841aao.jpg";
+			}
+			cntClick++;
+		}*/
+		
+		function array(){
+			var arr = ['哆啦A夢很可愛喔', '他是來自22世紀的呆呆機器貓', '藍色的機器貓'];
+			for(var item in arr){
+				alert(arr[item]);
+			}
+		}
+		var time = 0;
+		var cntChange = 0;
+		$('#haha').hide();
+		$(document).ready(function load(){
+			while(time < 10){
+				if(time%2==0){
+					if(cntChange%3==0){
+						$('#doraemon').attr('src','http://fa.topitme.com/a/1a/84/1120932505591841aao.jpg');
+					} else if (cntChange%3==1){
+						$('#doraemon').attr('src','15_121010114251_1.jpg');
+					} else {
+						$('#doraemon').attr('src','http://img2.a0bi.com/upload/ttq/20150301/1425192535736.jpg');
+					}
+					cntChange++;
+				}
+				time++;
+			}
+			
+		});
+	</script>
+</head>
+<body>
+	<a type="button" onclick="array()">
+		<div id="title">哆啦A夢調查</div>
+	</a>
+	<div class="lalala">
+		<!--<form>
+			<h1>你的名字</h1>
+			<input id="text_option" type="text" name="name" />
+			<h1>你的姓名</h1>
+			<input type="radio" name="sex" value="boy" />男
+			<input type="radio" name="sex" value="girl" />女
+			<input type="submit" name="SB" value="送出" />
+		</form>-->
+		<h1>哆啦A夢很可愛</h1>
+		<input id="ch_cute" type="checkbox" value="yes" /><span>&nbsp;Yes , he is cute.</span>
+		<h1>對哆啦A夢的意見</h1>
+		<input id="text_option" type="text" />
+		<div id="picture">
+			<a href="http://www.dora-world.com.tw/">
+				<img id="Doraemon" src="http://fa.topitme.com/a/1a/84/1120932505591841aao.jpg" />
+			</a>
+		</div>
+		<input type="button" value="我叫計數，快來按我(科科)" onclick="count(0);" />
+		<input id="haha" type="button" value="我是一行來改變你網頁的邪惡按鍵" onclick="letsGoFun();" />
+	</div>
+	
+</body>
+</html>

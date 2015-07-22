@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>哆啦A夢</title>
+	<meta name="description" content="Doraemon is cute.">
+	<meta http.eqiv = "Content Type" content = "text/html" charset = "utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$.ajax({
+				url: "http://maps.googleapis.com/maps/api/geocode/json",
+				type: "GET",
+				dataType: "json",
+				data: {
+					address: "聖約翰科技大學";
+				},
+				success: function(data, textStatus, jqXHR){
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+</body>
+</html>
